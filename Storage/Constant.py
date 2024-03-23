@@ -1,0 +1,20 @@
+class Constant:
+    Root          = "/DownKyi"                 # 根目录
+    Aria          = f"{Root}/Aria"             # Aria
+    Logs          = f"{Root}/Logs"             # 日志
+    Database      = f"{Root}/Storage"          # 数据库
+    Download      = f"{Database}/Download.db"  # 历史（搜索、下载）（加密）
+    History       = f"{Database}/History.db"
+    Config        = f"{Root}/Config"           # 配置
+    Settings      = f"{Config}/Settings"       # 设置
+    Login         = f"{Config}/Login"          # 登录cookies
+    Bilibili      = f"{Root}/Bilibili"         # Bilibili
+    Danmaku       = f"{Bilibili}/Danmakus"     # 弹幕
+    Subtitle      = f"{Bilibili}/Subtitle"     # 字幕
+    Toutu         = f"{Bilibili}/Toutu"        # 头图
+    Cover         = f"{Bilibili}/Cover"        # 封面
+    CoverIndex    = f"{Cover}/Index.db"        # 封面文件索引
+    Snapshot      = f"{Bilibili}/Snapshot"     # 视频快照
+    SnapshotIndex = f"{Snapshot}Index.db"      # 视频快照文件索引
+    Header        = f"{Bilibili}/Header"       # 用户头像
+    HeaderIndex   = f"{Header}/Index.db"       # 用户头像文件索引
