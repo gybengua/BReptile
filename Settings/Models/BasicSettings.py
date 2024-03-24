@@ -5,8 +5,8 @@ from Settings.DownloadFinishedSort   import DownloadFinishedSort
 
 class BasicSettings:
     def __init__(self):
-        self.AfterDownload:        AfterDownloadOperation = AfterDownloadOperation.NONE
-        self.IsListenClipboard:    AllowStatus            = AllowStatus.NONE
-        self.IsAutoParseVideo:     AllowStatus            = AllowStatus.NONE
-        self.ParseScope:           ParseScope             = ParseScope.NONE
-        self.DownloadFinishedSort: DownloadFinishedSort   = DownloadFinishedSort.DOWNLOAD
+        self.AfterDownload:        AfterDownloadOperation = None
+        self.IsListenClipboard:    AllowStatus            = None
+        self.IsAutoParseVideo:     AllowStatus            = None
+        self.ParseScope:           ParseScope             = None
+        self.DownloadFinishedSort: DownloadFinishedSort   = None

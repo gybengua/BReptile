@@ -15,3 +15,6 @@ class PlayUrl:
         self.Durl:              List[PlayUrlDurl]          = PlayUrlDurl.PlayUrlDurlList(play_url_dict.get("durl", None))
         self.Dash:              PlayUrlDash                = PlayUrlDash(play_url_dict["dash"])
         self.SupportFormats:    List[PlayUrlSupportFormat] = PlayUrlSupportFormat.PlayUrlSupportFormatList(play_url_dict["support_formats"])
+        self.SupportFormatsDict = dict()
+        for supportFormat in self.SupportFormats:
+            self.SupportFormatsDict[supportFormat.Quality] = supportFormat

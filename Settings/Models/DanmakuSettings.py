@@ -3,13 +3,13 @@ from Settings.DanmakuLayoutAlgorithm import DanmakuLayoutAlgorithm
 
 class DanmakuSettings:
     def __init__(self):
-        self.DanmakuTopFilter:          AllowStatus = AllowStatus.NONE
-        self.DanmakuBottomFilter:       AllowStatus = AllowStatus.NONE
-        self.DanmakuScrollFilter:       AllowStatus = AllowStatus.NONE
-        self.IsCustomDanmakuResolution: AllowStatus = AllowStatus.NONE
-        self.DanmakuScreenWidth:        int         = 0
-        self.DanmakuScreenHeight:       int         = 0
+        self.DanmakuTopFilter:          AllowStatus = None
+        self.DanmakuBottomFilter:       AllowStatus = None
+        self.DanmakuScrollFilter:       AllowStatus = None
+        self.IsCustomDanmakuResolution: AllowStatus = None
+        self.DanmakuScreenWidth:        int         = None
+        self.DanmakuScreenHeight:       int         = None
         self.DanmakuFontName:           str         = None
-        self.DanmakuFontSize:           int         = 0
-        self.DanmakuLineCount:          int         = 0
-        self.DanmakuLayoutAlgorithm:    DanmakuLayoutAlgorithm = DanmakuLayoutAlgorithm.NONE
+        self.DanmakuFontSize:           int         = None
+        self.DanmakuLineCount:          int         = None
+        self.DanmakuLayoutAlgorithm:    DanmakuLayoutAlgorithm = None

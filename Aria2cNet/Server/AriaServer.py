@@ -48,6 +48,5 @@ class AriaServer:
                           "")
 
     @classmethod
-
     def ExcuteProcess(cls, exe, arg):
         subprocess.run(exe + " " + arg)

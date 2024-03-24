@@ -45,8 +45,8 @@ class SettingsManager(object):
         self.fileNameParts          = [
             FileNamePart.MAIN_TITLE,
             FileNamePart.SLASH,
-            FileNamePart.SECTION,
-            FileNamePart.SLASH,
+            #FileNamePart.SECTION,
+            #FileNamePart.SLASH,
             FileNamePart.ORDER,
             FileNamePart.HYPHEN,
             FileNamePart.PAGE_TITLE,
@@ -149,7 +149,6 @@ class SettingsManager(object):
     def SetAriaMaxOverallDownloadLimit(self, ariaMaxOverallDownloadLimit):
         self.GetSettings().Network.AriaMaxOverallDownloadLimit
 
-
     def GetAriaMaxDownloadLimit(self):
         if self.GetSettings().Network.AriaMaxDownloadLimit == None:
             self.SetAriaMaxDownloadLimit(self.ariaMaxDownloadLimit)
@@ -170,3 +169,52 @@ class SettingsManager(object):
     def SetAriaFileAllocation(self, ariaFileAllocation):
         self.GetSettings().Network.AriaFileAllocation = ariaFileAllocation
 
+    def GetUserInfo(self):
+        if self.GetSettings().UserInfo == None:
+            self.SetUserInfo(self.userInfo)
+            return self.userInfo
+        else:
+            return self.GetSettings().UserInfo
+
+    def SetUserInfo(self, userInfo):
+        self.GetSettings().UserInfo = userInfo
+
+    def GetQuality(self) -> int:
+        if self.GetSettings().Video.Quality == None:
+            self.SetQuality(self.quality)
+            return self.quality
+        else:
+            return self.GetSettings().Video.Quality
+
+    def SetQuality(self, quality):
+        self.GetSettings().Video.Quality = quality
+
+    def GetVideoCodecs(self):
+        if self.GetSettings().Video.VideoCodecs == None:
+            self.SetVideoCodecs(self.videoCodecs)
+            return self.videoCodecs
+        else:
+            return self.GetSettings().Video.VideoCodecs
+
+    def SetVideoCodecs(self, videoCodecs):
+        self.GetSettings().Video.VideoCodecs = videoCodecs
+
+    def GetAudioQuality(self):
+        if self.GetSettings().Video.AudioQuality == None:
+            self.SetAudioQuality(self.audioQuality)
+            return self.audioQuality
+        else:
+            return self.GetSettings().Video.AudioQuality
+
+    def SetAudioQuality(self, audioQuality):
+        self.GetSettings().Video.AudioQuality = audioQuality
+
+    def GetFileNameParts(self):
+        if self.GetSettings().Video.FileNameParts==None or len(self.GetSettings().Video.FileNameParts)==0:
+            self.SetFileNameParts(self.fileNameParts)
+            return self.fileNameParts
+        else:
+            return self.GetSettings().Video.FileNameParts
+
+    def SetFileNameParts(self, fileNameParts):
+        self.GetSettings().Video.FileNameParts = fileNameParts
