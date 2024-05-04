@@ -1,0 +1,15 @@
+class VideoStat:
+    def __init__(self, stat_dict): # "stat
+        self.aid:        int = stat_dict["aid"]
+        self.coin:       int = stat_dict["coin"]
+        self.danmaku:    int = stat_dict["danmaku"]
+        self.dislike:    int = stat_dict["dislike"]
+        self.evaluation: str = stat_dict["evaluation"]
+        self.favorite:   int = stat_dict["favorite"]
+        self.his_rank:   int = stat_dict["his_rank"]
+        self.like:       int = stat_dict["like"]
+        self.now_rank:   int = stat_dict["now_rank"]
+        self.reply:      int = stat_dict["reply"]
+        self.share:      int = stat_dict["share"]
+        self.view:       int = stat_dict["view"]
+        self.vt:         int = stat_dict["vt"]
